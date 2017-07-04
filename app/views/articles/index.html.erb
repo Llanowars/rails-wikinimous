@@ -1,6 +1,4 @@
-
-
-  <nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -24,23 +22,20 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
 
+      <article>
+      <% @articles.each do |article| %>
+        <h2><%= link_to article.title, article_path(article) %></h2>
+        <p><%= article.content %></p>
+        <% end %>
+      </article>
 
-  <article>
-  <% @articles.each do |article| %>
-    <h2><%= link_to article.title, article_path(article) %></h2>
-    <%= article.content %>
-    <% end %>
-  </article>
-
-
-
-      </div>
     </div>
   </div>
+</div>
 
 
 

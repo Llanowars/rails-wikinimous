@@ -1,6 +1,4 @@
-
-
-  <nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -28,13 +26,12 @@
     <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
 
+        <article>
+          <h2><%= @article.title%></h2>
+          <%= @article.content %>
+        </article>
 
-  <article>
-    <h2><%= @article.title%></h2>
-    <%= @article.content %>
-  </article>
-
-
+        <%= link_to "destroy", article_path(@article), method: :delete %>
 
       </div>
     </div>
